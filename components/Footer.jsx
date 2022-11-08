@@ -9,7 +9,7 @@ const Footer = () => {
         {
             Languages.map((language, index) => {
                 return (
-                    <p key={index} className='text-xs ml-2 pt-2 text-footer-gray'>{ language.name }</p>
+                    <p key={index} data-cy='languages' className='text-xs ml-2 pt-2 text-footer-gray'>{ language.name }</p>
                 )
             })
         }

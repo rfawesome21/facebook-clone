@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import Input from '../components/Input'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='flex h-11.5/12 bg-facebook md:py-12 lg:py-space justify-evenly xs:flex-wrap md:flex-nowrap'>
-            <div className='flex flex-col xl:ml-56 md:h-80 sm:w-8/12 md:justify-center md:w-5/12 xl:w-4.5/12'>
+            <section className='flex flex-col xl:ml-56 md:h-80 sm:w-8/12 md:justify-center md:w-5/12 xl:w-4.5/12'>
             <Image src={'/facebook.svg'} alt='facebook' 
                 width={300}
                 className='xs:mx-auto md:m-0'
@@ -20,22 +21,28 @@ export default function Home() {
                 <h2 className='xs:text-center md:text-left md:pl-8 xs:text-xs md:text-lg lg:text-2xl xl:text-3xl m-0 -mt-3'>
                 Facebook helps you connect and share with the people in your life.
                 </h2>
-            </div>
-            <div className='flex flex-col md:mr-8 xl:mr-60 mt-8 xs:w-11/12 md:w-5/12 xl:w-3.5/12'>
-                <div className='bg-white shadow-xl rounded-md'>
-                    <div className='p-5'>
-                        <input type={'text'} placeholder='Email Address or Phone Number' className='border-border-1 py-4 border-inputBorder px-4 rounded-md w-full pt-2 focus:outline-inputOutline' />
-                        <input type={'text'} placeholder='Password' className='border-border-1 border-inputBorder py-4 px-4 rounded-md pt-2 w-full mt-3 focus:outline-inputOutline' />
+            </section>
+            <section className='flex flex-col md:mr-8 xl:mr-60 mt-8 xs:w-11/12 md:w-5/12 xl:w-3.5/12'>
+                <section className='bg-white shadow-xl rounded-md'>
+                    <section className='p-5'>
+                        <Input 
+                        placeholder={'Email'}
+                        type='email'
+                         />
+                        <section className='mt-3' />
+                        <Input placeholder={'Password'}
+                        type='password'
+                        />
                         <button className='w-full text-white bg-facebook-blue rounded-md mt-4 py-2.5 font-bold text-xl'>Log in</button>
                         <p className='text-center text-sm text-blue-600 mt-5 font-semibold'>Forgotten Password?</p>
                         <hr className='text-gray-200 mt-5' />
-                        <div className='flex justify-center'>
+                        <section className='flex justify-center'>
                             <button className='bg-signup-button text-white text-center mx-auto rounded-md py-3 mt-5 px-5 font-semibold'>Create New Account</button>
-                        </div>
-                    </div>
-                </div>
+                        </section>
+                    </section>
+                </section>
                 <p className='mt-7 text-center text-sm'><b>Create a Page</b> for a celebrity, brand or business.</p>
-            </div>
+            </section>
       </div>
       <Footer />
     </div>

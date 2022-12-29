@@ -1,0 +1,81 @@
+.Input[placeholder] {
+    padding: 0.35rem ;
+}
+
+.Wrapper {
+    position: absolute;
+    display: inline-block;
+    background-color: #BD4A49;
+    box-shadow: 0 0 0 1px rgb(139 3 0 / 75%), 0 1px 10px rgb(0 0 0 / 35%);   
+}
+
+.surnameWrapper {
+    position: absolute;
+    height: 43.41px;
+    background-color: #BD4A49;
+    box-shadow: 0 0 0 1px rgb(139 3 0 / 75%), 0 1px 10px rgb(0 0 0 / 35%);   
+    top: 50px;
+    z-index: 99;
+}
+
+.Triangle {
+    position: relative;
+    top: 13px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to bottom right, #BD4A49 50%, transparent 0);
+    border-radius: 2px 0 0 0;
+    transform: rotate(135deg);
+}
+
+.errorWrapper {
+    right: 420px;
+}
+
+.surnameTriangle {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to bottom right, #BD4A49 50%, transparent 0);
+    border-radius: 2px 0 0 0;
+    transform: rotate(45deg);
+}
+
+.Label {
+    color: rgb(96, 103, 112);
+}
+
+.Question {
+    background-color: #5F6770;
+}
+
+.ModalAnimate {
+    animation: fadein 0.4s;
+}
+
+.ModalUnAnimate {
+    animation: fadeOut 0.2s;
+}
+
+.BoxFadeOut {
+    top: 10px;
+    right: 355px;
+    width: 84%;
+    animation: fadeOut 0.2s;
+}
+
+.Box {
+    top: 10px;
+    right: 355px;
+    width: 84%;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

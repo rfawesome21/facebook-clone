@@ -63,6 +63,11 @@ export const useForm = () => {
 
     const handleRadioClick = (type) => {
         setInputFields(type, true)
+        if (dateOfBirthErrorIcon && type==='gender') {
+            setDateOfBirthErrorIcon(false)
+        } else if (genderErrorIcon && type === 'dateOfBirth') {
+            setGenderErrorIcon(false)
+        }
     }
 
     const hideErrorWrapper = (type) => {

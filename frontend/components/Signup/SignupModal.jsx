@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Input from '../Input'
 import Modal from '../Modal'
 import SignupInput from './SignupInput'
 import Styles from '../../styles/Home.module.css'
@@ -28,7 +27,7 @@ const SignupModal = ({close}) => {
     const [day, setDay] = useState(0)
     const [month, setMonth] = useState('')
     const [year, setYear] = useState(0)
-    const [pronouns, setPronouns] = useState('')
+    const [pronouns, setPronouns] = useState('Select your pronouns')
     const [gender, setGender] = useState('')
     const [informationBox, setShowInformationBox] = useState(false)
     const [genderInformationBox, setGenderInformationBox] = useState(false)
@@ -243,9 +242,9 @@ const SignupModal = ({close}) => {
                         </div>
                         {gender === 'custom' ? 
                         <div className='flex flex-col mt-3'>
-                            <SignupSelect value={'Select your pronoun'} data={birthdayPronouns} onChange={e => setPronouns(e.target.value)} />
+                            <SignupSelect value={pronouns} data={birthdayPronouns} onChange={e => setPronouns(e.target.value)} handleOnFocus={handleOnFocus} />
                             <p className='mt-1 text-xs text-label'>Your pronoun is visible to everyone</p>
-                            <SignupInput placeholder={'Gender(optional)'} className='bg-input-gray focus:outline-none mt-1' />
+                            <SignupInput placeholder={'Gender(optional)'} className='bg-input-gray focus:outline-none mt-1' handleOnFocus={handleOnFocus} handleOnBlur={handleOnBlur} />
                         </div>
                         : <></>}
                     </div>
